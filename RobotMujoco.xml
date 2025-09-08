@@ -24,6 +24,6 @@
         </body>
     </worldbody>
     <actuator>
-        <position name="joint_1" joint="joint_1" ctrllimited="true" ctrlrange="-3.14 3.14" kp="1" kv="0.4"/>
+        <position name="joint_1" joint="joint_1" ctrllimited="true" ctrlrange="-3.14 3.14" kp="1" kv="0.1"/>
     </actuator>
 </mujoco>
