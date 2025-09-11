@@ -10,20 +10,23 @@
     </asset>
     <worldbody>
         <body name="MujocoBase">
-            <geom mesh="MujocoBase"/>
+            <geom mass = "100" mesh="MujocoBase"/>
             <body name="BaseMotor">
-                <geom mesh="BaseMotor"/>
+                <geom mass = "0.362" mesh="BaseMotor"/>
                 <body name="Arm">
                     <joint name="joint_1" pos="0 0 0" axis="1 0 0" limited="false"/>
-                    <geom mesh="Arm"/>
+                    <geom mass = "0.15" mesh="Arm"/>
                     <body name="ArmMotor">
-                        <geom mesh="ArmMotor"/>
+                        <geom mass = "0.362" mesh="ArmMotor"/>
                     </body>
                 </body>
             </body>
         </body>
     </worldbody>
     <actuator>
-        <position name="joint_1" joint="joint_1" ctrllimited="true" ctrlrange="-3.14 3.14" kp="1" kv="0.1"/>
+        <motor name="joint_1_torque" joint="joint_1" ctrllimited="true" ctrlrange="-9 9"/>
     </actuator>
+    <contact>
+        <exclude body1 = "Arm" body2 = "BaseMotor"/>
+    </contact>
 </mujoco>
