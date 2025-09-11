@@ -2,6 +2,7 @@
     <default>
         <geom type="mesh" xyaxes="1 0 0 0 1 0"/>
     </default>
+    <option timestep = "0.001"/>
     <asset>
         <mesh name="Arm" file="Arm.stl" scale="0.001 0.001 0.001"/>
         <mesh name="ArmMotor" file="ArmMotor.stl" scale="0.001 0.001 0.001"/>
@@ -15,7 +16,7 @@
                 <geom mass = "0.362" mesh="BaseMotor"/>
                 <body name="Arm">
                     <joint name="joint_1" pos="0 0 0" axis="1 0 0" limited="false"/>
-                    <geom mass = "0.15" mesh="Arm"/>
+                    <geom mass = "0" mesh="Arm"/>
                     <body name="ArmMotor">
                         <geom mass = "0.362" mesh="ArmMotor"/>
                     </body>

@@ -1,0 +1,37 @@
+
+
+Bodies (1)
+Area	64659.991 mm^2
+Density	0.002 g / mm^3
+Mass	540.254 g
+Volume	2.920E+05 mm^3
+Physical Material	FR4
+Appearance	Opaque(197,202,206)
+
+Bounding Box
+	Length 	 20.00 mm
+	Width 	 340.00 mm
+	Height 	 66.247 mm
+Center of Mass	72.30 mm, 150.00 mm, -1.042E-05 mm
+
+Moment of Inertia at Center of Mass   (g mm^2)
+	Ixx = 4.836E+06
+	Ixy = -1892.248
+	Ixz = 0.00
+	Iyx = -1892.248
+	Iyy = 1.753E+05
+	Iyz = 1.442
+	Izx = 0.00
+	Izy = 1.442
+	Izz = 4.695E+06
+
+Moment of Inertia at Origin   (g mm^2)
+	Ixx = 1.699E+07
+	Ixy = -5.861E+06
+	Ixz = 0.407
+	Iyx = -5.861E+06
+	Iyy = 2.999E+06
+	Iyz = 2.286
+	Izx = 0.407
+	Izy = 2.286
+	Izz = 1.967E+07
