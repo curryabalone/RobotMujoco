@@ -1,0 +1,33 @@
+<mujoco model="2DofArm">
+    <default>
+        <geom type="mesh" xyaxes="1 0 0 0 1 0"/>
+    </default>
+    <option timestep = "0.001"/>
+    <asset>
+        <mesh name="Arm" file="Arm.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="ArmMotor" file="ArmMotor.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="BaseMotor" file="BaseMotor.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="MujocoBase" file="MujocoBase.stl" scale="0.001 0.001 0.001"/>
+    </asset>
+    <worldbody>
+        <body name="MujocoBase">
+            <geom mass = "100" mesh="MujocoBase"/>
+            <body name="BaseMotor">
+                <geom mass = "0.362" mesh="BaseMotor"/>
+                <body name="Arm">
+                    <joint name="joint_1" pos="0 0 0" axis="1 0 0" limited="false"/>
+                    <geom mass = "0" mesh="Arm"/>
+                    <body name="ArmMotor">
+                        <geom mass = "0.362" mesh="ArmMotor"/>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+    <actuator>
+        <motor name="joint_1_torque" joint="joint_1" ctrllimited="true" ctrlrange="-9 9"/>
+    </actuator>
+    <contact>
+        <exclude body1 = "Arm" body2 = "BaseMotor"/>
+    </contact>
+</mujoco>
